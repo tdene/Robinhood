@@ -1,2 +1,11 @@
-ID name
-PWD password
+RHID "robinhoodname"
+RHPWD "robinhoodpassword"
+DID "discordname"
+DPWD "discordpassword"
+DCHAN "channel1" "channel2"
+DSERV "server1" "server2"
+MT "1" (delete this comment; number of seconds between stop order checks)
+DMT "5" (delete this comment; number of seconds between watchlist checks)
+DTH "2" (delete this comment; i don't think this actually does anything)
+NSD "3.5" (delete this comment; number of std deviations before watchlist triggers)
+WATCH "SPY QQQ" (delete this comment; default watchlist)

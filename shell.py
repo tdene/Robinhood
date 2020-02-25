@@ -274,7 +274,7 @@ class RHShell(cmd.Cmd):
                 x=shlex.split(l)
                 self.config[x[0]]=x[1]
 
-        Thread(target=lambda: RHDiscord(),daemon=True).start()
+        #Thread(target=lambda: RHDiscord(),daemon=True).start()
 
         self.API = RHAPI()
         self.API.login(self.config['RHID'],self.config['RHPWD'])

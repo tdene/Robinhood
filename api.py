@@ -78,8 +78,9 @@ class RHAPI:
             "Accept-Encoding": "gzip, deflate",
             "Accept-Language": "en;q=1, fr;q=0.9, de;q=0.8, ja;q=0.7, nl;q=0.6, it;q=0.5",
             "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
-            "X-Robinhood-API-Version": "1.240.4",
+            "X-Robinhood-API-Version": "1.265.0",
             "Connection": "keep-alive",
+#            "User-Agent": "Mozilla/5.0 (X11; CrOS x86_64 11895.95.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.125 Safari/537.36",
             "User-Agent": "Robinhood/823 (iPhone; iOS 7.1.2; Scale/2.00)",
             "Origin": "https://robinhood.com",
             "Referer": "https://robinhood.com/"
@@ -95,6 +96,7 @@ class RHAPI:
             'scope': 'internal',
             'grant_type': 'password',
             'client_id': self.client_id,
+            'device_token': "03856839-a0f1-4a68-bd43-62e32504fe80",
             'expires_in': 86400
         }
         req = self.session.post(self._ep('login'),data=payload)
@@ -487,32 +489,4 @@ class RHAPI:
 
     @loginDec
     def test(self):
-#        url='https://api.robinhood.com/instruments/f7c10684-8a42-401b-933f-094c98ed9f0a/'
-#        print(self.getAccount())
-#        url=self._ep('positions',True)
-#        url='https://api.robinhood.com/options/positions/404490f6-ce0c-4568-b61c-405fd4ed64c6/'
-
-#        url='https://api.robinhood.com/options/instruments/894f0800-d193-477a-becd-9b3de6912206/'
-#        req=self.session.get(url)
-#        print(req.json())
-
-
-#        print(self._instrumentQuote(['https://api.robinhood.com/options/instruments/894f0800-d193-477a-becd-9b3de6912206/'],True))
-#        print(self.positionQuote('9ba0c544-7511-4f7f-bf5d-ece9b9f51a24'))
-#        print(self.positionQuote('404490f6-ce0c-4568-b61c-405fd4ed64c6'))
-
-#        res = [x for x in req.json()['results'] if float(x['quantity'])!=0.0]
-#        print(res)
-#        url='https://api.robinhood.com/options/instruments/7806a4f4-bde6-421e-87fd-184fd5bedd41/'
-#        url='https://api.robinhood.com/accounts/831558663/'
-#        url='https://api.robinhood.com/portfolios/historicals/831558663/'
-#        print(self.getStockID(['SPY','AAPL']))
-#        print(self.getChainID(['8f92e76f-1e0e-4478-8580-16a6ffcfaef5','450dfc6d-5510-4d40-abfb-f633b7d9be3e']))
-#        print(self.getOptionID([['SPY','C','280','2019-03-15'],['NVDA','C','160','2019-03-15']]))
-#        print(self.getAnyID(['SPY','AAPL','SPY C 280 2019-03-15'.split(' ')]))
-#        b=self.bestOption([['SPY','C'],['AAPL','P']])
-        b=self.getPosition("7d65aad2-2bba-48a9-aea7-b502ba7f086d")
-        print(b)
-#        for a in b:
-#            print(a)
-#        pass
+        pass
